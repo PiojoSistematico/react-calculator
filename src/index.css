@@ -167,22 +167,35 @@ main {
   gap: 1rem;
 }
 
-.display {
+.display-section {
   border: 0.4rem solid var(--clr-gray-900);
   border-radius: 1rem;
   display: grid;
-  grid-template-rows: 1fr 2fr;
   align-items: center;
+  grid-template-columns: 1fr 9fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "operation formula"
+    "operation value";
 }
 
 .formula {
+  grid-area: formula;
   text-align: right;
   font-size: var(--font-size-300);
 }
 
 .value {
+  grid-area: value;
   text-align: right;
   font-size: var(--font-size-600);
+}
+
+.operation {
+  grid-area: operation;
+  text-align: center;
+  font-size: var(--font-size-800);
+  font-weight: var(--font-weight-bold);
 }
 
 .grid {
