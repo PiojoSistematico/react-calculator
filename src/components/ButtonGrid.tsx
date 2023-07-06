@@ -25,7 +25,7 @@ const ButtonGrid: React.FunctionComponent<ButtonGridProps> = ({
       <Button handleClick={handleClick} value={"2"}></Button>
       <Button handleClick={handleClick} value={"3"}></Button>
       <Button handleClick={handleClick} value={"+"}></Button>
-      <Button handleClick={handleClick} value={"±"}></Button>
+      <Button handleClick={handleClick} value={"%"}></Button>
       <Button handleClick={handleClick} value={"0"}></Button>
       <Button handleClick={handleClick} value={"."}></Button>
       <Button handleClick={handleClick} value={"="}></Button>

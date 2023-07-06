@@ -216,51 +216,8 @@ main {
   justify-content: center;
   align-items: center;
   font-size: var(--font-size-600);
-  /* font-weight: var(--font-weight-bold); */
 }
 
-/* h1 {
-  align-self: center;
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-}
-
-button {
-  border: 0.1rem solid var(--clr-gray-400);
-  border-radius: 0.5rem;
-  padding: 0.2rem 0.6rem;
-  font-size: var(--font-size-300);
-}
-
-span {
-  padding-left: 1rem;
-  font-size: var(--font-size-700);
-  font-weight: var(--font-weight-bold);
-}
-
-
-
-.square:hover,
-button:hover {
-  background-color: var(--clr-gray-300);
-}
-
-.x-symbol {
-  color: var(--clr-green-400);
-  pointer-events: none;
-}
-
-.o-symbol {
-  color: var(--clr-red-400);
-  pointer-events: none;
-}
-
-p {
-  font-weight: var(--font-weight-bold);
-}
- */
 /* Media queries */
 /* @media (min-width: 50em) {
 } */

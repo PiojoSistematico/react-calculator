@@ -25,7 +25,10 @@ const Calculator = () => {
         setValue((v) => v.slice(0, -1));
         break;
       case "=":
-        setValue(calculate(formula, operation));
+        if (formula.slice(-1) == "=") break;
+        setValue(calculate(formula + value, operation));
+        setOperation(str);
+        setFormula((v) => v + value + str);
         break;
       case "+":
       case "-":
@@ -34,23 +37,20 @@ const Calculator = () => {
         setOperation(str);
         if (conditions.some((op) => formula.slice(-1) == op)) {
           setFormula((v) => v.slice(0, -1) + str);
-        } else if (conditions.some((op) => formula.includes(op))) {
-          setValue(calculate(formula, operation));
         } else {
-          setFormula((v) => v + str);
+          setFormula(value + str);
+          setValue("");
         }
+        break;
+      case "%":
+        setOperation(str);
+        setValue(calculate(value, "%"));
         break;
       default:
         setValue((v) => v + str);
-        setFormula((v) => v + str);
         break;
     }
   }
-
-  /* refresh page for a new game */
-  /* function refreshPage() {
-    window.location.reload();
-  } */
 
   return (
     <main>
